@@ -12,6 +12,7 @@ __author__ = 'gua'
 # =====
 # config
 # =====
+from pip._vendor.urllib3.connectionpool import xrange
 
 pattern_path = 'pattern.json'
 # pattern_path = 'heart.json'
@@ -151,7 +152,7 @@ def save(path, pattern):
 t = turtle.Turtle()
 t.hideturtle()
 t.speed(0)
-t.tracer(0, 0)
+t.getscreen().tracer(0, 0)
 
 
 def click(x, y):
