@@ -14,8 +14,8 @@ __author__ = 'gua'
 # =====
 from pip._vendor.urllib3.connectionpool import xrange
 
-pattern_path = 'pattern.json'
-# pattern_path = 'heart.json'
+# pattern_path = 'pattern.json'
+pattern_path = 'heart.json'
 
 # line_length
 line_length = 120
@@ -167,7 +167,7 @@ def click(x, y):
     # draw pattern
     pattern.append((x, y))
     if len(pattern) % 4 == 0:
-        save(pattern_path, pattern)
+        # save(pattern_path, pattern)
         start, end, p1, p2 = pattern[-4:]
         draw_bezier(t, bezier_steps, start, end, p1, p2)
         turtle.update()
